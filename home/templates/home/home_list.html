@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Theme Company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    .jumbotron {
+        background-color: #f4511e;
+        color: white;
+        padding: 100px 25px;
+    }
+
+    .bg-grey {
+        background-color: #f6f6f6;
+    }
+
+    .container-fluid{
+        padding: 60px 50px;
+    }
+
+    .logo {
+        font-size: 200px;
+    }
+
+    @media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
+    .logo-small{
+        color:#f4511e;
+        font-size: 50px;
+    }
+
+    .logo {
+        color: #f4511e;
+        font-size: 200px;
+    }
+
+    .logo-smallest{
+        color: white;
+        font-size: 25px;
+    }
+
+    .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.navbar{
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px ;
+    line-height: 1.42857143;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+</style>
+
+<body>
+
+<div class="jumbotron text-center">
+  <h1>KLJ-Nieuwrode</h1> 
+    <p>We specialize in blablabla</p>
+    <form class='form-inline'>
+        <div class='input-group'>
+        <input type='email' class='form-control' size="50" placeholder="Email Adress" required >
+            <div class='input-group-btn'>
+                <button type='button' class='btn btn-danger'>Subscribe</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div id='about' class='container-fluid'>
+    <div class='row'>
+        <div class='col-sm-8    '>
+            <h2>Over KLJ-Nieuwrode</h2>
+            <h4>Hier lult ge ma wa</h4>
+            <p>Nice Paragraafke</p>
+            <button class='btn btn-default btn-lg'>Get in Touch</button>
+        </div>
+        <div class="col-sm-4">
+                <span class="glyphicon glyphicon-signal logo"></span>
+        </div>
+    </div>
+</div>
+
+<div id='news' class="container-fluid bg-grey">
+    <div class='row'>
+        <div class='col-sm-4'>
+            <span class='glyphicon glyphicon-globe logo' ></span>
+        </div>
+        <h4><button class='btn btn-default btn-lg' onclick="location.href = 'posts';">Go to Page</button></h4>
+        <h2>Laatste bericht</h2>
+        <h4><strong>TITEL:</strong> {{posts.title}}</h4> 
+        <p><strong>INHOUD:</strong> {{posts.text}}</p>
+        <p><sub>gepubliceerd: {{posts.created_date}}</sub></p>
+    </div>
+</div>
+
+<div id='services' class="container-fluid text-center">
+        <h2>Diensten</h2>
+        <h4>Wat we aanbieden</h4>
+        <br>
+        <div class="row">
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-off logo-small"></span>
+            <h4>POWER</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-heart logo-small"></span>
+            <h4>LOVE</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-lock logo-small"></span>
+            <h4>JOB DONE</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+          </div>
+          </div>
+          <br><br>
+        <div class="row">
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-leaf logo-small"></span>
+            <h4>GREEN</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-certificate logo-small"></span>
+            <h4>CERTIFIED</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-wrench logo-small"></span>
+            <h4>HARD WORK</h4>
+            <p>Lorem ipsum dolor sit amet..</p>
+          </div>
+        </div>
+      </div>
+
+    <div id='portfolio' class='container-fluid text-center bg-grey'>
+        <h2>Activiteiten</h2>
+        <h4>Wat we zoal doen</h4>
+        <div class='row text-center'>
+            <div class='col-sm-4'>
+                <div class='thumbnail'>
+                    <img src='https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/32629416_2098711497028440_4400116728290344960_n.jpg?_nc_cat=0&oh=51b3d8cee72a795a8b87cffcbe001592&oe=5BC7B0D1' alt="Zondagse activiteiten">
+                    <p><strong>Zondagse activiteiten</strong></p>
+                </div>
+            </div>
+            <div class='col-sm-4'>
+                <div class='thumbnail'>
+                    <img src='https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/20664584_1973903202842604_3217998210246773905_n.jpg?_nc_cat=0&oh=38dabfc992f5afc339b4a75bc12366aa&oe=5BD0B8B8' alt="Kamp">
+                    <p><strong>Kamp</strong></p>
+                </div>
+            </div>
+            <div class='col-sm-4'>
+                    <div class='thumbnail'>
+                        <img src='https://scontent-bru2-1.xx.fbcdn.net/v/t31.0-8/28953721_2074733326092924_2160362202272384889_o.jpg?_nc_cat=0&oh=4a7d7e6b4804d58cefa5a95b1346a610&oe=5C0209FF' alt="Gewestactiviteit">
+                        <p><strong>Gewestactiviteit</strong></p>
+                    </div>
+                </div>
+    </div>
+
+    <div id='contact' class="container-fluid bg-grey">
+            <h2 class="text-center">CONTACT</h2>
+            <div class="row">
+              <div class="col-sm-5">
+                <p>Contact us and we'll get back to you within 24 hours.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Losting 47a</p>
+                <p><span class="glyphicon glyphicon-phone"></span> 0471 10 24 41</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> info@klj-nieuwrode.be</p> 
+              </div>
+                <div class='container col-sm-7 pull-right'>
+                    <form>
+                        <div class="form-group">
+                                <label for="comment">Neem contact op.</label>
+                                <textarea class="form-control" rows="10" id="comment"></textarea>
+                        </div>
+                    </form>
+                </div>  
+                  <div class="col-sm-12 form-group"></div>
+                    <button class="btn btn-default pull-right" onclick="sendMail(); return false">Send</button>
+                  </form>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+    <nav class='navbar navbar-default navbar-fixed-top'>
+        <div class='container'>
+            <div class='navbar-header'>
+                <button type="button" class='navbar-toggle' data-toggle="collapse" data-target="#myNavbar">
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                </button>
+                <a class='navbar-brand' href='#'><span class='glyphicon glyphicon-fire logo-smallest'></span></a>
+            </div>
+            <div class='collapse navbar-collapse' id='myNavbar'>
+                <ul class='nav navbar-nav navbar-right'>
+                    <li><a href='#about'>ABOUT</a></li>
+                    <li><a href='#news'>NEWS</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>     
+        </div>
+    </nav>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+            <div id="about" class="container-fluid">
+            <div id="news" class="container-fluid bg-grey">
+            <div id="services" class="container-fluid">
+            <div id="portfolio" class="container-fluid">
+            <div id="contact" class="container-fluid">
+</body>
+</html>
+
+<script>
+ function go_to_news() {
+            window.history.go(-1);
+            }
+
+function sendMail() {
+    var link = "mailto:info@klj-nieuwrode.be"
+             + "?cc="
+             + "&subject=" + escape("Vraag aan klj-nieuwrode")
+             + "&body=" + escape(document.getElementById('comment').value)
+    ;
+
+    window.location.href = link;
+}
+</script>
+

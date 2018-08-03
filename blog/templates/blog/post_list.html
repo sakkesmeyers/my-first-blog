@@ -1,22 +1,139 @@
 <html>
     <head>
-        <title>Sakke's Blog</title>
+        <title>Nieuws</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     </head>
+    <style>
+            .jumbotron {
+                background-color: #f4511e;
+                color: white;
+                padding: 100px 25px;
+            }
+        
+            .bg-grey {
+                background-color: #f6f6f6;
+            }
+        
+            .container-fluid{
+                padding: 60px 50px;
+            }
+        
+            .logo {
+                font-size: 200px;
+            }
+        
+            @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+        }
+            .logo-small{
+                color:#f4511e;
+                font-size: 50px;
+            }
+        
+            .logo {
+                color: #f4511e;
+                font-size: 200px;
+            }
+        
+            .logo-smallest{
+                color: white;
+                font-size: 25px;
+            }
+        
+            .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+        
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .navbar{
+            margin-bottom: 0;
+            background-color: #f4511e;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px ;
+            line-height: 1.42857143;
+            letter-spacing: 4px;
+            border-radius: 0;
+        }
+        
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+        
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #f4511e !important;
+            background-color: #fff !important;
+        }
+        
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+        
+        .panel-heading{
+            color: #f4511e;
+            background-color: #f4511e;
+        }
+        
+        </style>
+    
     <body>
-        <div>
-            <h1><a href="/">Sakke's Blog</a></h1>
+        <div class='jumbotron text-center'>
+            <h1>KLJ Nieuwtjes</h1>
         </div>
 
+<div class='panel-group'>
 {% for post in posts %}
-    <div>
-        <p>published:{{ post.published_date}}</p>
-        <h1><a href=''>{{post.title}} </a></h1>
-        <p>[[post.text|linebreaksbr</p>
-
-
+    <div class="container-fluid">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h1>{{post.title}}</h1></div>
+        <div class="panel-body"><p>{{post.text}}</p></div>
+        <p><sup>published:{{ post.created_date}}</sup></p> 
+        </div>     
     </div>
 {% endfor %}
+</div>
 
+<nav class='navbar navbar-default navbar-fixed-top'>
+        <div class='container'>
+            <div class='navbar-header'>
+                <button type="button" class='navbar-toggle' data-toggle="collapse" data-target="#myNavbar">
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                </button>
+                <a class='navbar-brand' href='#'><span class='glyphicon glyphicon-fire logo-smallest'></span></a>
+            </div>
+            <div class='collapse navbar-collapse' id='myNavbar'>
+                <ul class='nav navbar-nav navbar-right'>
+                    <li><a onclick="location.href = '/home';">HOME</a></li>
+                    <li><a href='#about'>ABOUT</a></li>
+                    <li><a href='posts'>NEWS</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>     
+        </div>
+    </nav>
+    <button onclick="goBack()">Go Back 2 Pages</button>
+        </body>
+    </html>
 
-    </body>
-</html>
+    <script>
+
+    </script>
