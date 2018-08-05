@@ -97,15 +97,15 @@
         </div>
 
 <div class='panel-group'>
-{% for post in posts %}
+    {% for post in posts %}
     <div class="container-fluid">
         <div class="panel panel-default">
             <div class="panel-heading"><h1>{{post.title}}</h1></div>
         <div class="panel-body"><p>{{post.text}}</p></div>
-        <p><sup>published:{{ post.created_date}}</sup></p> 
+        <div class="panel-body"><p><sup>published:{{ post.created_date}}</sup></p> </div>
         </div>     
     </div>
-{% endfor %}
+    {% endfor %}
 </div>
 
 <nav class='navbar navbar-default navbar-fixed-top'>
@@ -130,10 +130,4 @@
             </div>     
         </div>
     </nav>
-    <button onclick="goBack()">Go Back 2 Pages</button>
-        </body>
     </html>
-
-    <script>
-
-    </script>

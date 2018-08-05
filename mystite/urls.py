@@ -21,4 +21,5 @@ urlpatterns = [
     path('posts', include('blog.urls')),
     path('', include('home.urls')), 
     path('home', include('home.urls')),
+    path('maandprogrammas', include('maandprogrammas.urls')),
 ]
